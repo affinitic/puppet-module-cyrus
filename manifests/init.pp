@@ -1,6 +1,7 @@
 class cyrus (
   $cyrus_tls_config,
   $managed_mail_domains,
+  $cyrus_admin,
   $ldap_bind_pw,
   $ldap_bind_dn                 = 'cn=manager,dc=root',
   $ldap_base                    = 'dc=root',
@@ -27,5 +28,6 @@ class cyrus (
     authentication_ldap_servers => $cyrus::authentication_ldap_servers,
     altnamespace                => $cyrus::altnamespace,
     cyrus_sieve_bind            => $cyrus::cyrus_sieve_bind,
+    cyrus_admin                 => $cyrus::cyrus_admin
   }
 }
