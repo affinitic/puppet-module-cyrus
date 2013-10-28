@@ -8,6 +8,7 @@ class cyrus (
   $authentication_ldap_servers  = [ 'ldap://localhost' ],
   $altnamespace                 = false,
   $cyrus_sieve_bind             = 'localhost:sieve',
+  $cyrus_sieve_bind_vpn         = 'localhost:sieve',
 ) {
 
   validate_array( $managed_mail_domains, $authentication_ldap_servers)
@@ -28,6 +29,7 @@ class cyrus (
     authentication_ldap_servers => $cyrus::authentication_ldap_servers,
     altnamespace                => $cyrus::altnamespace,
     cyrus_sieve_bind            => $cyrus::cyrus_sieve_bind,
+    cyrus_sieve_bind_vpn        => $cyrus::cyrus_sieve_bind_vpn,
     cyrus_admin                 => $cyrus::cyrus_admin
   }
 }
