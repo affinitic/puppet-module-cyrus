@@ -76,7 +76,7 @@ admins: cyrus <%= cyrus_admin %>
 # for any other user.  Like "admins:" above, you can have imap_proxyservers
 # and sieve_proxyservers.
 #proxyservers: cyrus
-
+sieve_extensions: fileinto reject envelope body vacation imapflags notify include regex subaddress relational copy
 # No anonymous logins
 allowanonymouslogin: no
 
