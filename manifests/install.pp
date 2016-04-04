@@ -9,7 +9,7 @@ class cyrus::install {
 
   package { [$cyrus::variables::cyrus_pkg]:
     ensure  => present,
-    require => User ['cyrus']
+    require => User['cyrus']
   }
 }
 

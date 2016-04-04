@@ -15,7 +15,7 @@ class cyrus (
   validate_bool( $altnamespace)
   validate_string( $cyrus_tls_config, $ldap_base, $ldap_bind_dn, $ldap_bind_pw, $cyrus_sieve_bind)
 
-  Class ['sasl'] -> Class ['cyrus']
+  Class['sasl'] -> Class['cyrus']
   class { 'cyrus::install': } -> Class['cyrus::config'] ~> class { 'cyrus::service': }
 
   Ssl::Config::Cyrus[$cyrus_tls_config] -> Class['cyrus']
