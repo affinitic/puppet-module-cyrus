@@ -82,8 +82,8 @@ EVENTS {
 	# indexing of mailboxes for server side fulltext searches
 
 	# reindex changed mailboxes (fulltext) approximately every other hour
-	squatter_1	cmd="/usr/bin/nice -n 19 /usr/sbin/cyrus squatter -s" period=240
+	squatter1	cmd="/usr/bin/nice -n 19 /usr/sbin/cyrus squatter -s" period=240
 
 	# reindex all mailboxes (fulltext) daily
-	squatter_a	cmd="/usr/sbin/cyrus squatter" at=0417
+	squattera	cmd="/usr/sbin/cyrus squatter" at=0417
 }
