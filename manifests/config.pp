@@ -12,7 +12,9 @@ class cyrus::config (
 ) {
 
   include cyrus::variables
-  notify { "CYRUS: @cyrus_spool": }
+
+  $cyrus_spool = lookup("cyrus_spool", String, "first", "/var/spool/cyrus/mail")
+
   file { '/etc/imapd.conf':
     mode    => '0644',
     content => template('cyrus/imapd.conf.erb')

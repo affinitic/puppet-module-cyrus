@@ -7,11 +7,7 @@ configdirectory: /var/lib/cyrus
 
 # Which partition to use for default mailboxes
 defaultpartition: default
-<% if @cyrus_spool -%>
 partition-default: <%= @cyrus_spool %>
-<% else -%>
-partition-default: /var/spool/cyrus/mail
-<% end -%>
 
 # News setup
 partition-news: /var/spool/cyrus/news
