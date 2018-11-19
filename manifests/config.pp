@@ -12,7 +12,7 @@ class cyrus::config (
 ) {
 
   include cyrus::variables
-
+  notify { "CYRUS: @cyrus_spool": }
   file { '/etc/imapd.conf':
     mode    => '0644',
     content => template('cyrus/imapd.conf.erb')
